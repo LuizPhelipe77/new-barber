@@ -1,0 +1,624 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%
+}
+
+@media screen and (min-width: 320px) {
+    body {
+      display: grid;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .button-header{
+        display: none;
+    }
+
+    .home {
+        background-color: #202020;
+        overflow: hidden;
+        
+        /*margin-top: -10rem;*/               aqui
+        padding-bottom: 5rem;
+    }
+
+    /* MENU MOBILE*/
+
+    .name-barber {
+        color: white;
+        font-size: 3.5rem;
+        display: inline-block;
+        font-family: "Merriweather", serif;
+        position: relative;
+        margin-top: -5rem;
+    }
+
+    .btn-abrir i {
+        color: #00ff08;
+        font-size: 2rem;
+        
+        position: relative;
+        /*display: flex;
+        justify-content: space-between;*/
+    }
+
+    .btn-abrir{
+        display: flex;
+    }
+
+    .overlay-menu{
+        background-color: rgba(0, 0, 0, 0.445);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 8888;
+        display: none;
+    }
+
+    .menu-mobile {
+        background-color: rgba(22, 22, 22, 0.925);
+        height: 30vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 0%;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+    .menu-mobile.abrir-menu {
+        width: 30%;
+    }
+
+    .menu-mobile.abrir-menu ~ .overlay-menu {
+        display: block;
+    }
+
+    .menu-mobile .bnt-fecha i{
+        color: #00ff08;
+        font-size: 2rem;
+    }
+
+    .menu-mobile .bnt-fecha{
+        padding: 1rem 1rem;
+    }
+    ul {
+        list-style-type: none;
+    }
+    .menu-mobile nav ul {
+        text-align: right;
+    }
+
+    .menu-mobile nav ul li a {
+        display: flex;
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 1rem 3rem ;
+    }
+
+
+    article img {
+        margin-top: 10rem;
+        height: 30rem;
+        width: 25rem;
+        
+    }
+
+    h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgba(0, 0, 0, 0.048);
+        color: #ffffff;
+        margin-top: 5rem;
+    }
+    
+    
+    .primeiro {
+        font-size: 3rem;
+        margin-left: 1rem;
+        position: absolute;
+        top: 11rem;
+    }
+
+    .segundo {
+        font-size: 3rem;
+        margin-left: 8rem;
+        position: absolute;
+        top: 30rem;
+    }
+
+    /*section 2 */
+    .servicos {
+        background-color: #404040;
+        margin-top: -2.2rem;          /*posivel erro */
+    }
+    .flex {
+        margin: 2rem;
+        text-align: left;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 5rem;
+        color: white;
+        padding-bottom: 2rem;
+    }
+    h3 {
+        color: white;
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+    .txt-servicos {
+        color: white;
+        font-size: 2rem;
+        padding-bottom: 3rem;
+    }
+    
+    /*section 3 */
+    h2.txt-barbeiros {
+        background-color: #404040;
+        margin-left: -2rem;
+    }
+
+    .espaco{
+        font-size: 4rem;
+    }
+
+    .fotos {
+        background-color: #202020;
+        margin-top: -2rem;        /*possivel erro*/
+        display: grid;
+       
+        grid-template-columns: 1fr;
+        padding: 2.5rem;
+    }
+
+    .fotos img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        padding-bottom: 2rem;
+    }
+    
+
+    .barbeiros {
+        background-color: #404040;
+        display: grid;
+        grid-template-areas: 
+        "barbeiros barbeiros"
+
+        "primeiro segundo"
+
+        "terceiro quarto";
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .txt-barbeiros {
+        color: white;
+    }
+
+    #barbeiros{
+        grid-area: barbeiros;
+    }
+    #primeiro {
+        grid-area: primeiro;
+    }
+    #segundo {
+        grid-area: segundo;
+    }
+    #terceiro {
+        grid-area: terceiro;
+    }
+    #quarto {
+        grid-area: quarto;
+    }
+
+    .item {
+        border-radius: .8rem;
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        margin: 1rem;
+    }
+
+    .item img {
+        width: 100%;
+        aspect-ratio: 1/1.5;
+        object-fit: cover;
+        padding: 1rem;
+        opacity: .6;
+    }
+
+    .detalhes {
+        padding: .5rem;
+    }
+
+    .nome-barbeiros {
+        position: absolute;
+        top: 15rem;
+        right: 1rem;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .localizacao {
+        background-color: #000000;
+        margin-top: -1rem;     /*possivel erro*/
+    }
+
+    .txt-localizacao {
+
+        font-size: 3rem;
+        text-align: left;
+        margin: .5rem;
+    }
+
+    .mapa iframe {
+        margin: 3rem;
+        width: 25rem;
+        height: 15rem;
+    }
+    
+}
+
+@media screen and ( min-width: 481px) {
+    body{
+        display: grid;
+    }
+    .menu-desktop {
+        display: none;
+    }
+
+    article img {
+        height: 40rem;
+        width: 35rem;
+    }
+
+    .primeiro {
+        font-size: 5rem;
+    }
+    .segundo {
+        font-size: 5rem;
+    }
+
+    .nome-barbeiros {
+        top: 30rem;
+        font-size: 2rem;
+    }
+
+    .mapa iframe {
+        margin: 3rem;
+        width: 40rem;
+        height: 20rem;
+    }
+}
+
+
+@media screen and ( min-width: 769px) {
+    body{
+        display: grid;
+    }
+
+    .name-barber {
+        display: none;
+    }
+
+    .btn-abrir{
+        display: none;
+    }
+
+    .menu-desktop {
+        font-size: 5rem;
+    }
+
+    .name-barber {
+        font-size: 3rem;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    ul li a{
+        display: flex;
+        text-decoration: none;
+    }
+
+    article img {
+        height: 60rem;
+        width: 55rem;
+    }
+
+    .primeiro {
+        font-size: 8rem;
+        top: 5rem;
+        margin-left: 5rem;
+    }
+
+    .segundo {
+        font-size: 6rem;
+        top: 40rem;
+        margin-left: 25rem;
+    }
+
+    /*SERVICOS*/
+
+    h2 {
+        font-size: 8rem;
+    }
+
+    h2.servicos{
+        font-size: 8rem;
+        margin-left: -30rem;
+    }
+
+    h3 {
+        font-size: 4rem;
+    }
+    
+
+    /*barbeiros*/
+    .nome-barbeiros {
+        top: 50rem;
+        font-size: 2rem;
+    }
+
+    .mapa iframe {
+        margin: 8rem;
+        width: 100rem;
+        height: 40rem;
+    }
+
+}
+
+@media screen and ( min-width: 1050px) {
+    body {
+        display: grid;
+    }
+    /*HEADER*/
+    .interface {
+        max-width: 1201px;
+        margin: 0 auto;
+    }
+    
+    .home {
+        background-color: #202020;
+        overflow: hidden;
+        
+        padding-bottom: 5rem;
+    }
+
+    header {
+        width: 100%;
+        background-color: #000000;
+    }
+
+    
+
+    .icons > .interface {
+        padding-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header {
+        background-color: #202020;
+        padding: 20px 4%;
+    }
+
+    .header .logo img {
+        max-width: 24rem
+    }
+
+    .header .btn-social button {
+        width: 5rem;
+        height: 5rem;
+        font-size: 2rem;
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+    #insta{
+        border-radius: 40rem;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        box-shadow: 0px 3px 10px rgba(0,0,0,.25)
+    }
+    #whats{
+        background: #25D366;
+        border-radius: 2rem;
+    }
+    #face{
+        background: #fdfdfd;
+        background-color: #4267B2;
+        border-radius: 2rem;
+    }
+
+        /*            */
+
+    .button-header{
+        background-color: #202020;
+        width: 100%;
+    }
+
+    .button-header nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        list-style-type: none;
+    }
+
+    .button-header nav ul li a{
+        color: white;
+        padding: 1rem 4rem;
+        text-decoration: none;
+        font-size: 2.5rem;
+        transition: .2s;
+    }
+
+    .button-header nav ul li a:hover{
+        background-color: #00ff08;
+        color: #000000;
+        box-shadow: inset 0 0 8px black;
+    }
+
+    .drop-hover{
+        position: relative;
+    }
+
+    .drop-hover .drop {
+        position: absolute;
+        background-color: #404040;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+    .drop-hover .drop a{
+        padding: 1rem;
+    }
+
+    .drop-hover:hover .drop{
+        height: 19rem;
+    }
+
+
+    /*SECTION HOME*/
+    article img {
+        height: 60rem;
+        width: 70rem;
+    }
+
+    .primeiro {
+        font-size: 10rem;
+        top: 23rem;
+        left: 5rem;
+    }
+    .segundo {
+        font-size: 10rem;
+        top: 60rem;
+        left: 8rem;
+    }
+
+    /*servicos*/ 
+
+    .flex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2rem 4rem 5rem 6rem; 
+    }
+
+    .trabalhos {
+        margin: 1rem;
+    }
+
+    p.txt-servicos {
+        padding: 0 12rem 0 0;
+    }
+
+    h2.servicos {
+        padding-bottom: 0rem;
+        margin-left: -58rem;
+    }
+
+    .servicos {
+        padding-bottom: 4rem;
+    }
+
+    /*nosso espaco*/
+
+    h2.espaco {
+        margin-left: -40rem;
+        font-size: 8rem;
+    }
+
+    .img-barber {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+
+    /*barbeiros*/
+
+    .barbeiros {
+        padding-bottom: 10rem;
+        display: flex;
+    }
+    h2.txt-barbeiros {
+        background-color: #404040;
+        margin-left: -52rem;
+    }
+
+    .flex-barber {
+        display: flex;
+        margin-left: 5rem;
+    }
+
+    .item img {
+        width: 22rem;
+    }
+
+    .nome-barbeiros {
+        top:28rem;
+    }
+
+    #primeiro{
+        top: 5rem;
+        padding-left: 4rem;
+    }
+    #segundo{
+
+    }
+    #terceiro{
+        top: 5rem;
+    }
+    #quarto{
+
+    }
+
+    .mapa iframe {
+        margin:2rem;
+        width: 100rem;
+        height: 40rem;
+    }
+
+}
+
+@media screen and ( min-width: 1201px) {
+    .item img{
+        width: 32rem;
+    }
+
+    .espaco {
+        font-size: 8rem;
+    }
+
+    .nome-barbeiros {
+        top: 43rem;
+    }
+
+    #primeiro{
+        padding-left: 8rem;
+    }
+    
+    .mapa iframe {
+        margin: 5rem;
+        width: 140rem;
+        height: 50rem;
+    }
+    
+}
