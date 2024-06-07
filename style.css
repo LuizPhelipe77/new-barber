@@ -12,8 +12,7 @@
     body {
       display: grid;
     }
-
-    .menu-desktop {
+    section .header {
         display: none;
     }
 
@@ -24,9 +23,13 @@
     .home {
         background-color: #202020;
         overflow: hidden;
-        
-        /*margin-top: -10rem;*/               aqui
-        padding-bottom: 5rem;
+        padding-top: 10rem;   
+        margin-top: -10rem;   
+        padding-bottom: 5rem;  
+    }
+
+    .name-barber p {
+        margin-top: 5rem;      //   //
     }
 
     /* MENU MOBILE*/
@@ -110,7 +113,6 @@
 
 
     article img {
-        margin-top: 10rem;
         height: 30rem;
         width: 25rem;
         
@@ -580,16 +582,10 @@
         top: 5rem;
         padding-left: 4rem;
     }
-    #segundo{
-
-    }
     #terceiro{
         top: 5rem;
     }
-    #quarto{
-
-    }
-
+    
     .mapa iframe {
         margin:2rem;
         width: 100rem;
